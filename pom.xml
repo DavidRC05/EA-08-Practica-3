@@ -11,7 +11,7 @@
     <groupId>Practica3</groupId>
     <artifactId>Practica3Grupo4</artifactId>
     <version>1</version>
-    <name>Practica3Grupo4</name>
+    <name>practica01</name>
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>17</java.version>
