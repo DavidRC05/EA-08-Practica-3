@@ -8,17 +8,17 @@
         <h1>Estados</h1>
             <table border="1">
                 <thead>
-                <th>Nombre</th>
-                <th>Apellidos</th>
-                <th>Correo</th>
-                <th>Telefono</th>
+                <th>nombreEstado</th>
+                <th>nombreCapital</th>
+                <th>costas</th>
+                <th>poblacion</th>
                 </thead>
                 <tbody>
                     <tr th:each="Estado : ${Estados}">
-                        <td th:text="${Estados.nombre}"></td>
-                        <td th:text="${Estados.apellidos}"></td>
-                        <td th:text="${Estados.correo}"></td>
-                        <td th:text="${Estados.telefono}"></td>
+                        <td th:text="${Estados.nombre_estado}"></td>
+                        <td th:text="${Estados.nombre_capital}"></td>
+                        <td th:text="${Estados.costas}"></td>
+                        <td th:text="${Estados.poblacion}"></td>
                     </tr>
                 </tbody>
             </table>
