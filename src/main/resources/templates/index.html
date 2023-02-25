@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Practica3</title>
         <meta charset="UTF-8">
-        <link href="../static/css/estilo1.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <div>TODO write content</div>
+        <h1>Estados</h1>
+            <table border="1">
+                <thead>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Correo</th>
+                <th>Telefono</th>
+                </thead>
+                <tbody>
+                    <tr th:each="Estado : ${Estados}">
+                        <td th:text="${Estados.nombre}"></td>
+                        <td th:text="${Estados.apellidos}"></td>
+                        <td th:text="${Estados.correo}"></td>
+                        <td th:text="${Estados.telefono}"></td>
+                    </tr>
+                </tbody>
+            </table>
     </body>
 </html>
