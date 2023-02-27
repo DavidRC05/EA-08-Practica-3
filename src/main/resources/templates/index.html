@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html xmlns:th="https://www.thymeleaf.org">
     <head>
         <title>Practica</title>
@@ -7,22 +6,28 @@
     </head>
     <body>
         <h1>Estados</h1>
-        <table border="1">
-            <thead>
+        <a th:href="@{/nuevoEstado}">Nuevo Estado</a>
+        <div th:if="${estados != null and !estados.empty}">
+            <table border="1">
+                <thead>
                 <th>Nombre Estado</th>
                 <th>Nombre Capital</th>
                 <th>Costas</th>
                 <th>Poblacion</th>
-            </thead>
-            <tbody>
-                <tr th:each="estado : ${estados}">
-                    <td th:text="${estado.nombreEstado}"></td>
-                    <td th:text="${estado.nombreCapital}"></td>
-                    <td th:text="${estado.costas}"></td>
-                    <td th:text="${estado.poblacion}"></td>
-                </tr>
-            </tbody>
-        </table>
-
+                </thead>
+                <tbody>
+                    <tr th:each="estado : ${estados}">
+                        <td th:text="${estado.nombreEstado}"></td>
+                        <td th:text="${estado.nombreCapital}"></td>
+                        <td th:text="${estado.costas}"></td>
+                        <td th:text="${estado.poblacion}"></td>
+                        <td><a th:href="@{/actulizarEstado/} + ${estado.idEstado}">Actualizar</a></td>
+                        <td><a th:href="@{/eliminarEstado/} + ${estado.idEstado}">Eliminar</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div th:if="${estados == null or estados.empty}">
+            La lista está vacía
+        </div>
     </body>
-</html>
