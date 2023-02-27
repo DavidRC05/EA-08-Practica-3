@@ -10,17 +10,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Slf4j
 @Controller
-public class IndexController {
-    
+public class IndexController{
+
     @Autowired
+
     EstadoDao estadoDao;
-            
+
     @GetMapping("/")
-    public String page(Model model) {
-        
-        var Estados = estadoDao.findAll();
-        model.addAttribute("Estados", Estados);
+    public String inicio(Model model) {
+        log.info("Ahora Utilizando MVC");
+        var estados=estadoDao.findAll();
+        model.addAttribute("estados", estados);
         return "index";
     }
-    
+
 }

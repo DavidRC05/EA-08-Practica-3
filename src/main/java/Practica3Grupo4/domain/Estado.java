@@ -27,8 +27,7 @@ public class Estado {
     public Estado() {
     }
 
-    public Estado(Long idEstado, String nombreEstado, String nombreCapital, String costas, String poblacion) {
-        this.idEstado = idEstado;
+    public Estado(String nombreEstado, String nombreCapital, String costas, String poblacion) {
         this.nombreEstado = nombreEstado;
         this.nombreCapital = nombreCapital;
         this.costas = costas;

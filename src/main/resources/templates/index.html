@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-<html>
+
+<html xmlns:th="https://www.thymeleaf.org">
     <head>
-        <title>Practica3</title>
+        <title>Practica</title>
         <meta charset="UTF-8">
     </head>
     <body>
         <h1>Estados</h1>
-            <table border="1">
-                <thead>
-                <th>nombreEstado</th>
-                <th>nombreCapital</th>
-                <th>costas</th>
-                <th>poblacion</th>
-                </thead>
-                <tbody>
-                    <tr th:each="Estado : ${Estados}">
-                        <td th:text="${Estados.nombre_estado}"></td>
-                        <td th:text="${Estados.nombre_capital}"></td>
-                        <td th:text="${Estados.costas}"></td>
-                        <td th:text="${Estados.poblacion}"></td>
-                    </tr>
-                </tbody>
-            </table>
+        <table border="1">
+            <thead>
+                <th>Nombre Estado</th>
+                <th>Nombre Capital</th>
+                <th>Costas</th>
+                <th>Poblacion</th>
+            </thead>
+            <tbody>
+                <tr th:each="estado : ${estados}">
+                    <td th:text="${estado.nombreEstado}"></td>
+                    <td th:text="${estado.nombreCapital}"></td>
+                    <td th:text="${estado.costas}"></td>
+                    <td th:text="${estado.poblacion}"></td>
+                </tr>
+            </tbody>
+        </table>
+
     </body>
 </html>
