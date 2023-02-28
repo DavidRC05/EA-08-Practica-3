@@ -5,7 +5,8 @@
         <meta charset="UTF-8">
     </head>
     <body>
-        <h1>Estados</h1>
+        <header th:replace="layout/plantilla :: header"/>
+        <h2>Estados</h2>
         <a th:href="@{/nuevoEstado}">Nuevo Estado</a>
         <div th:if="${estados != null and !estados.empty}">
             <table border="1">
@@ -30,4 +31,5 @@
         <div th:if="${estados == null or estados.empty}">
             La lista está vacía
         </div>
+        <footer th:replace="layout/plantilla2 ::footer" />
     </body>
