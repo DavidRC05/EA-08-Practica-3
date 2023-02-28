@@ -10,8 +10,8 @@ public interface EstadoService {
     public Estado getEstado(Estado estado);
     public void save (Estado estado);
     public void delete (Estado estado);
-
+    
     public Object buscarEstado(Long id);
     
-   
+  
 }

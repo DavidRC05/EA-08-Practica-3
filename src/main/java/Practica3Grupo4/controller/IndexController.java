@@ -35,6 +35,7 @@ public class IndexController {
         estadoService.save(estado);
         return "redirect:/";
     }
+    
 
      @GetMapping("/editar/{id}")
     public String editar(@PathVariable Long id, Model model) {
